@@ -1,0 +1,19 @@
+<template>
+  <div>
+    <button class="btn">Hello Vue</button>
+  </div>
+</template>
+
+<script>
+export default {};
+</script>
+
+<style>
+.btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #7744ee;
+    border: 0;
+}
+</style>
