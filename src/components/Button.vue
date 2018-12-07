@@ -1,12 +1,12 @@
 <template>
   <div>
-    <button class="btn">{{ label }}</button>
+    <button :style='rounded' class="btn">{{ label }}</button>
   </div>
 </template>
 
 <script>
 export default {
-    props: ['label']
+    props: ['label', 'rounded']
 };
 </script>
 
