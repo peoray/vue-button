@@ -1,12 +1,17 @@
 <template>
   <div>
-    <button :style='rounded' class="btn">{{ label }}</button>
+    <button :class="{'btn': true, 'rounded': round}">{{ label }}</button>
   </div>
 </template>
 
 <script>
 export default {
-    props: ['label', 'rounded']
+  props: {
+    label: String,
+    round: {
+      type: Boolean
+    }
+  }
 };
 </script>
 
@@ -18,5 +23,9 @@ export default {
   background-color: #7744ee;
   border: 0;
   outline: none;
+}
+
+.rounded {
+  border-radius: 100px;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <p>I want to use this button test</p>
-    <Button :label='label'/>
+    <Button  :label='label'/>
   </div>
 </template>
 

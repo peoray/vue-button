@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Button :rounded="rounded" :label="label"/>
+    <Button round :label="label"/>
     <hr>
     <Test/>
   </div>
@@ -20,13 +20,6 @@ export default {
     return {
       label: "zagadat"
     };
-  },
-  computed: {
-    rounded() {
-      return {
-        borderRadius: "100px"
-      };
-    }
   }
 };
 </script>
