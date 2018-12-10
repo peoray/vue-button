@@ -1,16 +1,14 @@
 <template>
   <div>
-    <button :disabled="disable" class="btn" :class="classObject">{{ label }}</button>
+    <button class="btn" :class="classObject">
+      <slot></slot>
+    </button>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    label: {
-      type: String,
-      required: true
-    },
     round: {
       type: Boolean,
       default: false
@@ -18,11 +16,11 @@ export default {
     size: {
       type: String,
       default: "medium"
-    },
-    disabled: {
-      type: Boolean,
-      default: false
     }
+    // disabled: {
+    //   type: Boolean,
+    //   default: false
+    // }
   },
   computed: {
     classObject() {
@@ -30,10 +28,10 @@ export default {
         round: this.round,
         [this.size]: true
       };
-    },
-    disable() {
-      return true ? this.disabled : false;
     }
+    // disable() {
+    //   return true ? this.disabled : false;
+    // }
   }
 };
 </script>
@@ -46,6 +44,11 @@ export default {
   background-color: #7744ee;
   border: 0;
   outline: none;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+  background-color: #777;
 }
 
 .round {

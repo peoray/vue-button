@@ -1,28 +1,16 @@
 <template>
   <div id="app">
-    <app-button size='medium' :label='label'></app-button>
-    <hr>
-    <app-test/>
+    <app-button>Hello vue</app-button>
   </div>
 </template>
 
 <script>
-import Button from "./components/PButton.vue";
-import Test from "./components/test.vue";
+import Button from "./components/PButton";
 
 export default {
   name: "app",
   components: {
-    'app-button': Button,
-    'app-test': Test
-  },
-  data() {
-    return {
-      label: "zagadat"
-    };
+    "app-button": Button
   }
 };
 </script>
-
-<style>
-</style>
