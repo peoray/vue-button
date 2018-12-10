@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button class="btn" :class="{round, classObject}">{{ label }}</button>
+    <button :disabled="disable" class="btn" :class="classObject">{{ label }}</button>
   </div>
 </template>
 
@@ -18,22 +18,22 @@ export default {
     size: {
       type: String,
       default: "medium"
+    },
+    disabled: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
     classObject() {
-      let desiredSize = this.size;
       return {
-        [desiredSize]: true // cannot remember off top of head
+        round: this.round,
+        [this.size]: true
       };
+    },
+    disable() {
+      return true ? this.disabled : false;
     }
-    // classObject() {
-    //   return {
-    //     small: this.size === "small",
-    //     medium: this.size === "medium",
-    //     large: this.size === "large"
-    //   };
-    // }
   }
 };
 </script>

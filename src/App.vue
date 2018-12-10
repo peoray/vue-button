@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <app-button small :label='label'></app-button>
+    <app-button size='medium' :label='label'></app-button>
     <hr>
     <app-test/>
   </div>
