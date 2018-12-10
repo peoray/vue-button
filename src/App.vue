@@ -1,20 +1,20 @@
 <template>
   <div id="app">
-    <Button round :label="label"/>
+    <app-button round small :label='label'></app-button>
     <hr>
-    <Test/>
+    <app-test/>
   </div>
 </template>
 
 <script>
-import Button from "./components/Button.vue";
+import Button from "./components/PButton.vue";
 import Test from "./components/test.vue";
 
 export default {
   name: "app",
   components: {
-    Button,
-    Test
+    'app-button': Button,
+    'app-test': Test
   },
   data() {
     return {
