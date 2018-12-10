@@ -1,6 +1,6 @@
 <template>
   <div>
-    <button :class="{btn: true, rounded: round, small: small, medium, large}">{{ label }}</button>
+    <button class="btn" :class="{round, classObject}">{{ label }}</button>
   </div>
 </template>
 
@@ -15,15 +15,25 @@ export default {
       type: Boolean,
       default: false
     },
-    small: {
-      type: String
-    },
-    medium: {
-      type: String
-    },
-    large: {
-      type: String
+    size: {
+      type: String,
+      default: "medium"
     }
+  },
+  computed: {
+    classObject() {
+      let desiredSize = this.size;
+      return {
+        [desiredSize]: true // cannot remember off top of head
+      };
+    }
+    // classObject() {
+    //   return {
+    //     small: this.size === "small",
+    //     medium: this.size === "medium",
+    //     large: this.size === "large"
+    //   };
+    // }
   }
 };
 </script>
@@ -38,7 +48,7 @@ export default {
   outline: none;
 }
 
-.rounded {
+.round {
   border-radius: 100px;
 }
 
@@ -53,7 +63,7 @@ export default {
 }
 
 .large {
-  padding: 10px 20px;
-  font-size: 14px;
+  padding: 15px 25px;
+  font-size: 20px;
 }
 </style>
