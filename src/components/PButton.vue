@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <button class="btn" :class="classObject">
-      <slot></slot>
-    </button>
-  </div>
+  <!-- <div> -->
+  <button class="btn" :class="classObject">
+    <slot></slot>
+  </button>
+  <!-- </div> -->
 </template>
 
 <script>

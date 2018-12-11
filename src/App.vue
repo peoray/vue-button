@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <app-button>Hello vue</app-button>
+    <app-button disabled>Hello vue</app-button>
   </div>
 </template>
 
 <script>
-import Button from "./components/PButton";
+import appButton from "./components/PButton";
 
 export default {
   name: "app",
   components: {
-    "app-button": Button
+    "app-button": appButton
   }
 };
 </script>
