@@ -1,4 +1,4 @@
-# vue-buttons
+# vue-button
 
 ## Project setup
 ```
